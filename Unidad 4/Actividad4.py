@@ -55,8 +55,9 @@ print(f"¡Correcto! El número era {numero}. Lo adivinaste en {intentos} intento
 # =========================
 # 6) Numeros pares del 100 al 0
 # =========================
-for i in range(100,-1,-2):
-    print(i)
+for i in range(100, -1, -2):  
+    print(f"\n[5] {i}")      
+
 
 # =========================
 # 7) Suma de enteros desde 0 hasta un número ingresado
@@ -70,14 +71,14 @@ print(f"La suma de los números desde 0 hasta {numero} es: {suma}")
 # =========================
 # 8) Clasificación de números ingresados (pares/impares y positivos/negativos)
 # =========================
-
 pares = 0
 impares = 0
 positivos = 0
 negativos = 0
+rango = 100 #<---MUY RECOMENDABLE QUE SEA 10
 
-for i in range(100):  # <-- Cantidad de números a ingresar
-    numero = int(input(f"\n[8] Ingrese un número: "))
+for i in range(rango):  # <-- Cantidad de números a ingresar
+    numero = int(input(f"\n[8] Ingrese un número: (faltan {rango - i}) "))
     if numero % 2 == 0:# <-- Clasificación par/impar
         pares += 1
     else:
@@ -92,8 +93,10 @@ print(f"Números pares: {pares}, Números impares: {impares}, Números positivos
 # 9) media de 100 números enteros ingresados 
 # =========================
 suma = 0
-for i in range(100): # <-- Cantidad de números a ingresar
-    intero = int(input(f"\n[9] Ingrese un número entero: "))
+rango = 100 #<---MUY RECOMENDABLE QUE SEA 10
+
+for i in range(rango): # <-- Cantidad de números a ingresar
+    intero = int(input(f"\n[9] Ingrese un número entero: (faltan {rango - i}) "))
     suma += intero
     media = suma / (i + 1)
     print(f"Suma actual: {suma}, Media actual: {media:.2f}")
