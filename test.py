@@ -1,6 +1,9 @@
-import random
+# 6) Rotación de una lista 1 unidad a la derecha
+# =========================
+lista = [1, 2, 3, 4, 5, 6, 7]
 
-datos =[1, 3, 5, 3, 7, 1, 9, 5, 3]
-datos_sin_repetidos = [list(set(datos))]  # Eliminar duplicados usando set
-print("\n[4] Lista original:", datos)
-print("[4] Lista sin duplicados:", datos_sin_repetidos)
+print("\n[6] Lista original:", lista)
+lista_rotada = [lista[-1]] + lista[:-1]  # Rotar la lista una unidad a la derecha
+print("[6] Lista rotada a la derecha:", lista_rotada)
+
+# =========================

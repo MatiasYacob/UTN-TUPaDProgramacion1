@@ -59,5 +59,40 @@ print("\n[4] Lista original:", datos)   # Datos originales
 print("[4] Lista sin duplicados:", datos_sin_repetidos) # Datos sin duplicados
 
 # =========================
-# 5)
+# 5) Agregar o quitar nombres de una lista de estudiantes
+# =========================
+estudiantes = ["Ana", "Luis", "Carlos", "Marta", "Sofía", "Jorge",  "Lucía", "Diego"]
+print("\n[5] Lista inicial de estudiantes:")
+for estudiante in estudiantes:
+    print(estudiante)
+while True: # Bucle para agregar o quitar estudiantes
+    opcion = input("\n[5] ¿Desea agregar (a) o quitar (q) un estudiante? (o 'salir' para terminar): ").strip().lower()
+    if opcion == 'salir':
+        break
+    elif opcion == 'a':
+        nuevo_estudiante = input("[5] Ingrese el nombre del nuevo estudiante: ").strip()
+        estudiantes.append(nuevo_estudiante)
+        print(f"[5] Estudiante '{nuevo_estudiante}' agregado.")
+    elif opcion == 'q':
+        estudiante_borrar = input("[5] Ingrese el nombre del estudiante a quitar: ").strip()
+        if estudiante_borrar in estudiantes:
+            estudiantes.remove(estudiante_borrar)
+            print(f"[5] Estudiante '{estudiante_borrar}' eliminado.")
+        else:
+            print(f"[5] Estudiante '{estudiante_borrar}' no encontrado en la lista.")
+    else:
+        print("[5] Opcion no reconocida. Por favor, ingrese 'a', 'q' o 'salir'.")
+print("\n[5] Lista final de estudiantes:")
+for estudiante in estudiantes: # Mostrar la lista final
+    print(estudiante)
+
+# =========================
+# 6) Rotación de una lista 1 unidad a la derecha
+# =========================
+lista = [1, 2, 3, 4, 5, 6, 7]
+
+print("\n[6] Lista original:", lista)
+lista_rotada = [lista[-1]] + lista[:-1]  # Rotar la lista una unidad a la derecha
+print("[6] Lista rotada a la derecha:", lista_rotada)
+
 # =========================
